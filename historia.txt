@@ -3,3 +3,4 @@ si me olvide de algo, para sacarlo de preparacion
 y volver a area de trabajo
 utilizo el comando
 git rm --cached "nombre del archivo"
+mi primer commit
