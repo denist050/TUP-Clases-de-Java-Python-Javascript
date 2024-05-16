@@ -8,5 +8,17 @@ public class HolaMundo {
         
         int miVariable = 10;
         System.out.println(miVariable);
+        miVariable = 5;
+        System.out.println(miVariable);
+        //Tipo String
+        String miVariableCadena = "bienvenidos";
+        /*
+        Las variables tipo cadena tienen privilegios
+        Si fuese un objeto se utiliza "new String("Bienvenidos");"
+        */
+        System.out.println(miVariableCadena);
+        miVariableCadena = "Sigamos creciendo en Java";
+        System.out.println(miVariableCadena); 
+        //Control + click izquierdo me donde esta instanciada la variable.
     }
 }
