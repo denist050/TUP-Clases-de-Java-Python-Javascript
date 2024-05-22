@@ -82,14 +82,18 @@ public class HolaMundo {
         System.out.println("Comillas simples: \'"+nombre+"\'");//se utiliza \' para poner un espacio
         System.out.println("Comillas dobles: \""+nombre+"\"");// se utiliza \" para comillas dobles
         
+        /*
         //Clase Scanner
         Scanner entrada = new Scanner(System.in); //aqui hemos creado un objeto de la clase scanner llamado entrada
-        //es necesario importar esta clase ya que se encuentra definida en
-        //otra parte de las clases en Java
-        //Las clases que vamos a utilizar en Java las vamos a clasificar o empaquetar
-        //en Folders, a esto se lo conoce como paquetes, asi que esta clase se encuentra
-        //en un paquete llamado java.util.scanner
-        //Sino esta importada Scanner aparecera en rojo
+        /*
+        es necesario importar esta clase ya que se encuentra definida en
+        otra parte de las clases en Java
+        Las clases que vamos a utilizar en Java las vamos a clasificar o empaquetar
+        en Folders, a esto se lo conoce como paquetes, asi que esta clase se encuentra
+        en un paquete llamado java.util.scanner
+        Sino esta importada Scanner aparecera en rojo
+        */
+        /*
         System.out.println("Digite su nombre = ");
         //El metodo nextLine permite leer informacion de la consola
         var usuario2 = entrada.nextLine();
@@ -97,9 +101,60 @@ public class HolaMundo {
         System.out.println("Escriba el titulo: ");
         var titulo2 = entrada.nextLine();
         System.out.println("Resultado = " + titulo2 + " " + usuario2);
+        */
         
+        byte numEnteroByte = (byte)129; 
+        /*
+        podemos poner un valor superior al tipo byte mediante lo que se conoce
+        como conversion de tipos, con (byte)129 lo estamos obligando al
+        compilador a convertir este valor numerico de tipo entero a un valor
+        de tipo byte.
+        Si lo ejecutamos, imprimira -127 ya que se han ocupado los 127 numeros 
+        positivos. Esto se conoce como perdida de presicion al convertir los
+        tipos.
+        */
+        System.out.println("numEnteroByte = " + numEnteroByte);
+        System.out.println("Valor minimo del byte: " + Byte.MIN_VALUE); //Al ser clases, Byte comienza con mayusculas
+        System.out.println("Valor maximo del byte: " + Byte.MAX_VALUE);
         
+        short numEnteroShort = 32767;
+        System.out.println("numEnteroShort = " + numEnteroShort);
+        System.out.println("Valor minimo del short: " + Short.MIN_VALUE);
+        System.out.println("Valor maximo del short: " + Short.MAX_VALUE);
+        //Debido a las limitaciones de los tipos primitivos byte y short,
+        //se recomienda usar el primitivo int.
+        int numEnteroInt = (int) 2147483648L;
+        System.out.println("numEnteroInt = " + numEnteroInt);
+        System.out.println("Valor minimo del Int: " + Integer.MIN_VALUE);
+        System.out.println("Valor maximo del Int: " + Integer.MAX_VALUE);
+        /*
+        El numero maximo que se puede guardar dentro int es 
+        2147483647, para poner un numero mayor usamos la letra L para pasar
+        la literal a tipo long que es de 64 bits.
+        De todas maneras encontrarenmos perdida de presicion
+        */
+        long numEnteroLong = 9223372036854775807L; //Este seria el numero maximo para numeros enteros en java, para mayores se necesita usar floats
+        System.out.println("numEnteroLong = " + numEnteroLong);
+        System.out.println("Valor minimo del long: " + Long.MIN_VALUE);
+        System.out.println("Valor maximo del long: " + Long.MAX_VALUE);
         
+        /*
+        float numFloat = 10.0; por defoul, 10.0 se convierte en double(64 bits)
+        para que se convierta en flotante utilizamos la F al final de 10.0
+        o usar (float) 10.0
+        */
+        float numFlout = 3.4028235E38F;
+        System.out.println("numFlout = " + numFlout);
+        System.out.println("El valor minimo de float = " + Float.MIN_VALUE);
+        System.out.println("El valor maximo de float = " + Float.MAX_VALUE);
+        //El valor positivo o negativo se demuestra utilizando notacion exponencial
+        //Aqui seria 1.4E-45, usando la letra exponente indicamos en cuantas posiciones
+        // se movera el valor 1.4 para simplificar el numero
+        
+        double numDouble = 1.7976931348623157E308;
+        System.out.println("numDouble = " + numDouble);
+        System.out.println("El valor minimo de double = " + Double.MIN_VALUE);
+        System.out.println("El valor maximo de double = " + Double.MAX_VALUE);
         
     }
 }
