@@ -194,5 +194,54 @@ public class HolaMundo {
         System.out.println("varEnteroChar = " + varEnteroChar);
         int caracterChar = 'b';
         System.out.println("caracterChar = " + caracterChar);
+        
+        //Tipos primitivos tipos booleanos
+        //Las variables de tipo bool son tipo bandera
+        boolean varBool = true; //si usamos var en vez de boolean, usamos la inferencia de tipos y lo tomara como booleano
+        System.out.println("varBool = " + varBool);
+        //Cuando una variable es booleana ponemos la varia y la estructura if
+        //detectara si es verdadera o falsa, aunque se puede usar varBool == true
+        if (varBool) {
+            System.out.println("La bandera es verde");
+        }
+        else{
+            System.out.println("La bandera es roja");
+        }
+        
+        //Algoritmo: ¿Es mayor de edad?
+        var edad = 20; //Literal tener presente la inferencia de tipos
+        //var adulto = edad >= 18; //Esta es una expresion booleana
+        if (edad >= 18) {
+            System.out.println("Eres mayor de edad");
+        }
+        else{
+            System.out.println("Eres menor de edad");
+        }
+        
+        //Conversion de tipos primitivos
+        var edad1 = Integer.parseInt ("20");
+        System.out.println("edad1 = " + (edad1 + 1));
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPI = " + valorPI);
+        
+        //Pedir un valor
+        var entrada = new Scanner(System.in);
+        System.out.println("Digite su edad:");
+        edad1 = Integer.parseInt (entrada.nextLine());
+        System.out.println("edad = " + edad1);
+        
+        //Conversion de tipos primitivos en Java Parte 2
+        var edadTexto = String.valueOf(10);
+        System.out.println("edadTexto = " + edadTexto);
+        
+        //usamos el metodo charAt
+        var fraseChar = "programadores".charAt(12);
+        System.out.println("fraseChar = " + fraseChar);
+        
+        System.out.println("Digite un caracter: ");
+        fraseChar = entrada.nextLine().charAt(0);
+        System.out.println("fraseChar = " + fraseChar);
+      
+        
     }
 }
