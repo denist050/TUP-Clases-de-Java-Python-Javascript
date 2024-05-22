@@ -143,8 +143,8 @@ public class HolaMundo {
         para que se convierta en flotante utilizamos la F al final de 10.0
         o usar (float) 10.0
         */
-        float numFlout = 3.4028235E38F;
-        System.out.println("numFlout = " + numFlout);
+        float numFloat = 3.4028235E38F;
+        System.out.println("numFloat = " + numFloat);
         System.out.println("El valor minimo de float = " + Float.MIN_VALUE);
         System.out.println("El valor maximo de float = " + Float.MAX_VALUE);
         //El valor positivo o negativo se demuestra utilizando notacion exponencial
@@ -155,6 +155,44 @@ public class HolaMundo {
         System.out.println("numDouble = " + numDouble);
         System.out.println("El valor minimo de double = " + Double.MIN_VALUE);
         System.out.println("El valor maximo de double = " + Double.MAX_VALUE);
+       
+        /*
+        //Ineferencia de tipos var y tipos primitivos
+        var numEntero = 20; //Las literales sin punto automaticamente son de tipo int
+        System.out.println("numEntero = " + numEntero);
+        //Para ver el tipo de dato, ejecutaremos el paso a paso, el modo debugfile
+        //El punto de ruptura, line breakpoint detiene la ejecucion
+        var numFloat2 = 10.0F;
+        System.out.println("numFloat2 = " + numFloat2);
+        var numDouble2 = 10.0;
+        System.out.println("numDouble2 = " + numDouble2);
+        */
         
+        //Tipos primitivos char
+        char miVariableChar = 'a';
+        System.out.println("miVariableChar = " + miVariableChar);
+        
+        char varCaracter = '\u0024'; //Indicamos a Java la asignacion con el codigo unicode
+        System.out.println("varCaracter = " + varCaracter);
+        char varCaracterDecimal = 36; //Este es el valor decimal del juego de caracter unicode
+        System.out.println("varCaracterDecimal = " + varCaracterDecimal);
+        char varCaracterSimbolo = '$'; //Un caracter especial, podemos copiar y pegar desde unicode
+        System.out.println("varCaracterSimbolo = " + varCaracterSimbolo);
+        
+        var varCaracter1 = '\u0024'; //Indicamos a Java la asignacion con el codigo unicode
+        //en la inferencia de tipo lo referencia a  u0024 como tipo char 
+        System.out.println("varCaracter1 = " + varCaracter1);
+        var varCaracterDecimal1 = (char)36; //Aqui lo tomara como un valor entero y le asigna un tipo int, se usa (char) para que sea de tipo char
+        System.out.println("varCaracterDecimal1 = " + varCaracterDecimal1);
+        var varCaracterSimbolo1 = '$'; //Un caracter especial, podemos copiar y pegar desde unicode
+        System.out.println("varCaracterSimbolo1 = " + varCaracterSimbolo1);
+        
+        //Un char se puede asignar a un tipo entero porque el tipo int es de 
+        //32 bits mientras que el tipo char es de 16 bits
+        //Nos estaria mostrando el valor decimal asociado al simbolo que es 36 en unicode
+        int varEnteroChar = '$';
+        System.out.println("varEnteroChar = " + varEnteroChar);
+        int caracterChar = 'b';
+        System.out.println("caracterChar = " + caracterChar);
     }
 }
