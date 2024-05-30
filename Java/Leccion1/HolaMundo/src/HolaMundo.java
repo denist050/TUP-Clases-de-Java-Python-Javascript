@@ -242,6 +242,53 @@ public class HolaMundo {
         fraseChar = entrada.nextLine().charAt(0);
         System.out.println("fraseChar = " + fraseChar);
       
+        //Inicializar variables
+        int num1 = 5, num2 = 4;
+        //En inferencia de tipos se puede hacer en una sola linea;
+        var solucion = num1 + num2;
+        System.out.println("solucion de la suma = " + solucion);
         
+        solucion = num1 - num2;
+        System.out.println("solucion de la resta = " + solucion);
+        
+        solucion = num1 * num2;
+        System.out.println("solucion de la multiplicacion = " + solucion);
+        
+        solucion = num1 / num2;
+        System.out.println("solucion de la division = " + solucion);
+        
+        var solucion2 = 3.4 / num2;
+        System.out.println("solucion2 resultado de la division = " + solucion2);
+        
+        solucion = num1 % num2; //Guarda el residuo de la division
+        System.out.println("solucion = " + solucion); 
+        
+        if (num1 % 2 == 0) 
+            System.out.println("Es un numero par");
+        else
+            System.out.println("El numero es impar");
+        
+        int varNum1 = 1, varNum2 = 4;
+        var varNum3 = varNum1 + 6 - varNum2; //Una operacion
+        System.out.println("varNum3 = " + varNum3);
+        
+        //Operador de composicion, incrementando en 1
+        varNum1 += 1; // varNum1 = varNum1 + 1;
+        System.out.println("varNum1 = " + varNum1);
+        
+        varNum1 -= 3;
+        System.out.println("varNum1 = " + varNum1);
+        
+        varNum2 *= 2;
+        System.out.println("varNum2 = " + varNum2);
+        
+        varNum2 /= 2;
+        System.out.println("varNum2 = " + varNum2);
+        
+        varNum2 /= 3.4;
+        System.out.println("varNum2 = " + varNum2);
+        
+        varNum2 %= 2;
+        System.out.println("varNum2 = " + varNum2);
     }
 }
