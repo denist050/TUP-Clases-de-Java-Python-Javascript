@@ -7,19 +7,32 @@ Abrimos la terminal de Git Bash en Window o la terminal de Ubuntu, tambien la te
 
 ```sh
 pwd  #Vemos la ruta de la carpeta en la que estamos
+
 cd #Es para navegar a una carpeta: change directory -> cambiar de directorio
+
 cd / #Nos llava al home, en la raíz del disco
+
 cd ~ #La virgulilla significa que estamos en el lugar de los documentos o del usuario
+
 ls #Esto es listar los archivos, nos muestra todos los archivos en la raíz
+
 ls -al #El espacio -al significa que es un argumento especial para ver archivos ocultos
 #Usar la flecha hacía arriba nos muestra el último comando utilizado
+
 ls -l #Muestra casi todos los archivos sin los que están ocultos
+
 ls -a #Muestra el grupo de archivos pero no en una lista
+
 clear #Limpia la consola o ctrl + l
+
 cd .. #Nos devuelve a la carpeta anterior
+
 cd U + tab #Esto se usa para un autocompletado o para buscar una referencia
+
 cd /D #Cambiamos de disco en window
+
 df -h #Muestra todos los directorios en Ubuntu
+
 cd /mnt/d #Cambia de directorio usando WSL Ubuntu en window
 ```
 
@@ -28,13 +41,21 @@ cd /mnt/d #Cambia de directorio usando WSL Ubuntu en window
 
 ```sh
 cd ..
+
 cd ..
+
 cd /mnt/c
+
 cd ~ #Vamos a la raíz
+
 mkdir Tecnicatura #Recordar que en window las mayúsculas no tienen relevancia, pero si en Linux
+
 cd tecnicatura
+
 mkdir Python
+
 mkdir Java
+
 mkdir JavaScript
 ```
 <sub>
@@ -48,13 +69,21 @@ Profesor Ariel Betancud</sub>
 
 ```sh
 touch vacio.txt #Crea un archivo con su extención: ESCRIBIR DENTRO
+
 ctrl + s #Guardamos lo que escribimos en el archivo
+
 ./ #Significa la carpeta actual
+
 ../ #Significa la carpeta anterior
+
 cat vacio.txt #Vemos el contenido del archivo
+
 history #Veremos la historia completa de los comandos que hemos utilizado
+
 !72 + enter #Veremos el comando que utilizamos en ese número
+
 rm vacio.txt #Borra el archivo seleccionado, ¡¡¡¡CUIDADO!!!!
+
 rm --help #Muestra como funciona el comando
 ```
 
@@ -62,28 +91,53 @@ rm --help #Muestra como funciona el comando
 
 ```sh
 cd tecnicatura
+
 mkdir class-git
+
 cd class-git #Entramos en la carpeta que necesitamos trabajar
+
 git init #Creamos un repositorio en la carpeta central, se crea el archivo .git
+
 code .  #Abrimos VSC, el punto hace que se abra el archivo en el que estamos situados
+
 ctrl + n #Creamos un archivo nuevo y escribimos en el, como lo hicimos antes
+
 ctrl + s #Guardamos poniendo el nombre: historia.txt
+
 git status #Vemos el estado del proyecto en tiempo real, esta en el área de trabajo
+
 git add historia.txt #Enviamos el archivo al área de preparación
+
 git status #Para ver el estado de cambios
-git rm --cached historia.txt #Quitamos el archivo del área de preparación, cached significa que esta en memoria ram
+
+git rm --cached historia.txt #Quitamos el archivo del área de preparación, cached significa que esta 
+
+en memoria ram
+
 git config #Tedremos la lista de como funciona la configuración
+
 git config --list #Configuraciones por defecto, faltan cosas importantes
+
 git config --list --show-origin #Veremos donde están las configuraciones guardadas
+
 git config --global user.name "Ariel Betancud"
+
 git config --global user.email "betancudariel@gmail.com" #El correo debe ser el mismo que usaremos en GitHub
+
 git config --list #Ahora veremos que ya están todos los datos completos
+
 git add . #Ingresamos todos los archivos al área de preparación (ram)
+
 git commit -m "Mensaje importante del commit" #El primer commit esta hecho
+
 code . #Hacemos cambios en el archivo y guardamos
+
 git status #Hay cambios para commitear
+
 git add .
+
 git commit -m "Mi segundo commit"
+
 git log historia.txt #Vemos toda la historia de este archivo, el número largo es el hash del commit
 ```
 
@@ -104,16 +158,27 @@ Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hace
 
 ```sh
 cd tecnicatura #Ingresamos al direcotorio donde están nuestras carpetas de trabajo
+
 ls #Vemos los archivos y directorios que ya tenemos
+
 cd git #No hay nada
+
 cd .. #Salimos
+
 rm historia.txt #Eliminamos el archivo que habíamos hecho, esto en git bash (window) esto es para practica
+
 rm Git #rm: cannot remove 'Git': Is a directory
+
 rm --recursive -R Git #By default, rm does not remove directories.  Use the --recursive (-r or -R) arguments
+
 option to remove each listed directory, too, along with all of its contents. Esto es para practica
+
 rm --help #Nos muestra lo que les puse arriba como documentación en Inglés.
+
 mkdir class-git #Creamos la carpeta o directorio para trabajar en Git local por ahora.
+
 cd class-git #Entramos para crear el README.md para este sector.
+
 touch README.md #Vamos a crear un archivo nuevo, md significa markdown y se pueden trabajar con editores de texto, este es un lenguaje que transforma el texto a html.
 ```
 
@@ -128,12 +193,19 @@ code . #Abrimos VSC para editar el archivo.
 
 ```sh
 git status
+
 git add .
+
 git status
+
 git commit -m "Cargamos el README dentro del directorio class-git"
+
 git status
+
 git log #Para ver los dos commits hechos: Si tienes commiteada alguna clase anterior veras mas commits de los que yo tengo.
+
 cd ..
+
 cd ..
 ```
 
@@ -153,35 +225,60 @@ cd ..
 
 ```sh
 cd tecnicatura
+
 cd class-git
+
 ls
+
 touch historia.txt
+
 code .
 #Modificamos el archivo historia.txt colocando lo siguiente: Bienvenido     mi nombre es Ariel (coloca tu nombre)
+
 ctrl + s
+
 git status
+
 git add .
+
 git status
+
 git commit #Sin agregar -m veremos que pasa
 #Agregar mensaje y salir con
+
 Esc #Presionamos Escape 
+
 :wq! + enter #Y ya salimos si estamos en git bash con window
+
 Esc + shift + z + z #Salimos del mensaje para el commit, en linux, esto anda en algunas terminales
 #Agregamos otra línea de mensaje en historia.txt desde VSC: estoy estudiando programación
+
 ctrl + s
+
 git add .
+
 git commit
 #Se abre un editor de código basado en línea de comandos, editor de texto como VSC llamado vim
+
 Esc + i #Para comenzar a escribir mensaje del commit, no suele ser necesario
+
 ctrl + x #Para salir en linux
+
 s + enter #Para decir si al cambio y aceptar el nombre, ósea no cambiamos el nombre, la (s) es de si y la (y) es de yes, no olvidar enter en linux
+
 git show #Vemos todos los cambios en el último commit
+
 git log historia.txt #Vemos todos los commit
+
 q #Para salir del registro de commits
 #Copiamos un hash mas antoguo y otro reciente, ingresamos el siguiente comando
+
 git diff hash_commit_numerico hash_commit_numerico #Comparamos diferentes commits y sus cambios, poner la versión mas vieja primero, luego la mas nueva
+
 q #Para salir
+
 cd ..
+
 cd ..
 ```
 
@@ -197,56 +294,107 @@ Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hace
 
 ```sh
 cd tecnicatura
+
 cd class-git
+
 ls
+
 code .
+
 git log #Vemos los commit hechos hasta ahora
+
 Copiar el hash #El número largo que tiene el commit
+
 git reset hash-nombre-commit #Este nos permite volver a una versión anterior, hay 2 tipos de reset: el duro y el suave
+
 git status
+
 git add .
+
 git commit -m "Agregamos datos de estudios en historia.txt"
+
 git config --list #Veremos la configuración que ya hemos hecho con en nombre y email
+
 git reset hash-nombre-commit --hard #Es el duro, todo vuelve a su estado anterior, es el más usado, desaparece todo
+
 git reset hash-nombre-commit --soft #Este es el suave, lo que tengamos en staging segirá allí
+
 crear un archivo #portafolio.html introducir el código y
+
 touch portafolio.html
+
 html : 5 #Con esto se carga el código básico de html y modificamos
+
 ctrl + s #Guardamos
+
 Clic derecho en VSC Open with Live Server para ver en el navegador
+
 git status
+
 ls
+
 ls -al
+
 git add .
+
 git status
+
 git commit -m "Agregamos el html para nuestro portafolio"
+
 creamos CSS #Este es un archivo de estilos, para esto creamos una nueva carpeta llamada css
+
 mkdir css
+
 ls
+
 cd css
+
 touch style.css #creamos un archivo dentro: estilos.css le cargamos el código.
+
 ctrl + s #abrimos en el navegador y todo esta allí, pero todo esto supuestamente en git no existe.
+
 git status #tenemos cosas en el área de trabajo, en staging distintas
+
 git diff + enter #y nos muestra los cambios en memoria ram y en disco
+
 git add . #Agregamos todo al staging
+
 git status #Ya esta todo en memoria ram, a git solo le importan los archivos, guarda las carpetas como rutas y automaticamente las crea
+
 git commit -m "Creamos el css para darle algo de estilo a nuestro portafolio"
+
 git log #vemos lo nuevo que hemos hecho sin lo que borramos con el reset fuerte
+
 hacer cambios en historia.txt #Cambiamos la última línea y
+
 ctrl + s 
+
 git diff
+
 git commit -am "cambio en la última línea del historia.txt"
+
 git log
+
 q  #Esto para salir
+
 git log --stat #veremos los cambios especificos que hicimos en cuales archivos por medio del commit y veremos los cambios en bits
+
 q #salimos de la línea de commits, ahora queremos ver como era originalmente el archivo, osea la primera versión, copiamos el nombre del primer commit
+
 git checkout hash-nombre-commit historia.txt #Veremos el archivo en su estado original
+
 git status #Nos sugiere hacer un commit, si lo hacemos borramos todo lo que hicimos antes, debemos seguir con el siguiente commando
+
 git checkout master historia.txt #Volvemos a la versión master del archivo historia.txt, esto es muy peligroso
+
 git checkout hash-nombre-commit historia.txt #Volvemos a hacer esto y cambiamos cosas del archivo
+
 git commit -am "Reemplazo de una versión por otra de la historia"
+
 git log #Veremos los cambios sin tocar ningun otro archivo, esta es la forma de volver a una versión hacía atrás y llevarla a la cabeza de la master
+
 cd ..
+
 cd ..
 ```
 
@@ -276,10 +424,15 @@ cd ..
 
 ```sh
 mkdir git_reset_test #Vamos a hacer pruebas, es por esto que creamos una carpeta nueva
+
 cd git_reset_test #Entramos en la carpeta
+
 git init #Inicializamos el repositorio
+
 touch reset_file.txt
+
 git add reset_file.txt
+
 git commit -m"Iniciando el primer commit"
 ```
 <sub>
@@ -530,3 +683,259 @@ q #Para salir
 
 git checkout segunda #Volvemos a ver todos los cambios que hicimos de nuevo
 ```
+
+## CLASE 10 MIÉRCOLES 5 DE JUNIO DEL 2024 - Portafolio 4
+<sub>
+Fusión de ramas con Git merge parte 10
+
+La fusión en Git es la forma en que este sistema une un historial bifurcado. El comando git merge permite integrar líneas de desarrollo independientes generadas por git branch en una sola rama. Con este comando, podemos crear un nuevo commit que combina dos ramas o branches: la rama actual y la rama que se indica después del comando.
+
+Estos comandos de fusión del merge afectan solo a la rama actual y no a la rama de destino. Por lo tanto, te recomendamos utilizar git checkout para seleccionar la rama actual y git branch -d para eliminar la rama de destino obsoleta.
+
+
+Funcionamiento de Git merge
+
+Git merge fusiona secuencias de confirmaciones en un solo historial, generalmente para combinar dos ramas. Busca una confirmación de base común y genera una confirmación de fusión que representa la combinación de las dos ramas hasta el resultado final.
+
+¿Cómo unir dos ramas en git?
+
+Ahora bien, para combinar ramas en tu repositorio local, usa git checkout para cambiar a la rama donde deseas fusionar. Por lo general, esta es la rama principal. Luego, emplea git merge y especifica el nombre de la otra rama que deseas traer a esta rama. Ten en cuenta que esto es una combinación de avance rápido.
+
+¿Cómo realizar un merge en git?
+
+Para hacer un merge en Git, primero asegúrate de estar en la rama correcta. Después, usa el comando git merge seguido del nombre de la rama que quieres combinar. Por ejemplo, si quieres crear un nuevo commit en la rama master con los cambios de la rama segunda, usa este comando:
+</sub>
+
+```sh
+git checkout master
+
+git merge segunda
+```
+
+<sub>
+Es importante tener en cuenta que en caso de haber conflictos, debes guardar tus cambios antes de hacer git checkout para evitar perder tu trabajo. También es recomendable emplear los comandos básicos de GitHub, como git fetch, git push y git pull, para mantener actualizado tu repositorio.
+
+En este ejemplo, vamos a crear un nuevo commit en la rama master combinando los cambios de una rama llamada segunda: Otra opción es crear un nuevo commit en la rama segunda combinando los cambios de cualquier otra rama:
+
+Git es asombroso porque puede saber cuáles cambios deben conservarse en una rama y cuáles no. En casos de conflictos, asegúrate de guardar tus cambios antes de hacer git checkout para evitar perder tu trabajo.
+
+Comandos básicos de GitHub:
+</sub>
+
+```sh
+git init # crear un repositorio, si ya esta en la nube traerlo sin hacer git init
+
+git add . #agregar un archivo a staging.
+
+git commit -m “mensaje” #guardar el archivo en git con un mensaje.
+
+git branch nombre_rama #crear una nueva rama.
+
+git checkout nombre_rama #moverse entre ramas.
+
+git push origin rama #mandar cambios a un servidor remoto.
+
+git fetch #traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local.
+
+git merge rama #tiene dos usos. Uno es la fusión de ramas, funcionando como un commit en la rama actual, trayendo la rama indicada. Su otro uso es guardar los cambios de un servidor remoto en nuestro directorio.
+
+git pull origin rama #fetch y merge al mismo tiempo.
+
+git checkout “codigo de version” “nombre del archivo” #volver a la última versión de la que se ha hecho commit.
+
+git reset #vuelve al pasado sin posibilidad de volver al futuro, se debe usar con especificaciones.
+
+git reset --soft #vuelve a la versión en el repositorio, pero guarda los cambios en staging. Así, podemos aplicar actualizaciones a un nuevo commit.
+
+git reset --hard #todo vuelve a su versión anterior
+
+git reset HEAD #saca los cambios de staging, pero no los borra. Es lo opuesto a git add.
+
+git rm #elimina los archivos, pero no su historial. Si queremos recuperar algo, solo hay que regresar. se utiliza así:
+
+git rm --cached #elimina los archivos en staging pero los mantiene en el disco duro.
+
+git rm --force #elimina los archivos de git y del disco duro.
+
+git status #estado de archivos en el repositorio.
+
+git log #historia entera del archivo.
+
+git log --stat #cambios específicos en el archivo a partir de un commit.
+
+git show #cambios históricos y específicos hechos en un archivo.
+
+git diff “codigo de version 1” “codigo de version 2” #comparar cambios entre versiones.
+
+
+git diff #comparar directorio con staging.
+
+
+
+Comando en producción: TUVE QUE SOLUCIONAR UN CONFLICTO
+
+git status #En rama segunda: hacemos cambios en el archivo y guardamos
+
+git commit -am "Finalizado el cambio en rama segunda" #enter
+
+git status
+
+git checkout master #perdemos todo lo que ya habíamos hecho, hacemos cambios en el archivo agregando un nuevo parrafo y guardamos
+
+git commit -am "Agregado el contenido adicional del archivo y un mejor aporte"
+
+git checkout segunda #vemos como desaparecen los cambios
+
+git checkout master #Aquí es que vamos a hacer el merge
+
+git merge segunda #En mi caso tuve algunos conflictos que solucione a través de VSC, aclaro que nunca debemos utilizar Fusionar los dos cambios
+
+git commit -am "Arreglando conflicto" #Una vez solucionado debemos commitear
+
+git status #Debemos revisar en el navegador y en el código si algo quedo mal y cambiarlo
+
+git commit -am "Solucionado el conflicto 2"
+
+git merge segunda #ahora todo va bien
+
+git commit -am "Volvi a comentar en este caso de mi area laboral" #Añado información al archivo
+
+git log
+
+q #Para salir
+
+git commit -am "Para guardar estos cambios en el README.md"
+
+git checkout segunda
+
+git merge master #Traemos todos los cambios
+
+git commit -am "Cargamos esto ahora" #vamos a master y mergeamos
+
+git checkout master
+
+
+git merge segunda #y terminamos con esto
+```
+## CLASE 11 MIÉRCOLES 12 DE JUNIO DEL 2024 - Portafolio 5
+<sub>
+Resolución de conflictos al hacer merge parte 11
+
+Sección lectura
+
+Git nunca borra nada, a menos que nosotros se lo indiquemos. Cuando usamos los comandos git merge o git checkout estamos cambiando de rama o creando un nuevo commit, no borrando ramas ni commits (recuerda que puedes borrar commits con git reset y ramas con git branch -d).
+
+Git es muy inteligente y puede resolver algunos conflictos automáticamente: cambios, nuevas líneas, entre otros. Pero algunas veces no sabe cómo resolver estas diferencias, por ejemplo, cuando dos ramas diferentes hacen cambios distintos a una misma línea.
+
+Esto lo conocemos como conflicto y lo podemos resolver manualmente. Solo debemos hacer el merge, ir a nuestro editor de código y elegir si queremos quedarnos con alguna de estas dos versiones o algo diferente. Algunos editores de código como Visual Studio Code nos ayudan a resolver estos conflictos sin necesidad de borrar o escribir líneas de texto, basta con hacer clic en un botón y guardar el archivo.
+
+Recuerda que siempre debemos crear un nuevo commit para aplicar los cambios del merge. Si Git puede resolver el conflicto, hará commit automáticamente. Pero, en caso de no pueda resolverlo, debemos solucionarlo y hacer el commit.
+
+Los archivos con conflictos por el comando git merge entran en un nuevo estado que conocemos como Unmerged. Funcionan muy parecido a los archivos en estado Unstaged, algo así como un estado intermedio entre Untracked y Unstaged. Solo debemos ejecutar git add para pasarlos al área de staging y git commit para aplicar los cambios en el repositorio.
+
+Cómo revertir un merge Si nos hemos equivocado y queremos cancelar el merge, debemos usar el siguiente comando:
+</sub>
+
+```sh
+git merge --abort
+```
+<sub>
+Conflictos en repositorios remotos Al trabajar con otras personas, es necesario utilizar un repositorio remoto.
+­
+-Para copiar el repositorio remoto al directorio de trabajo local, se utiliza el comando git clone , y para enviar cambios al repositorio remoto se utiliza git push.
+
+-Para actualizar el repositorio local se hace uso del comando git fetch, luego se debe fusionar los datos traídos con los locales usando git merge.
+
+Para traer los datos y fusionarlos a la vez, en un solo comando, se usa git pull.
+
+­- Para crear commits rápidamente, fusionando git add y git commit -m "", usamos git commit -am "".
+
+­- Para generar nuevas ramas, hay que posicionarse sobre la rama que se desea copiar y utilizar el comando git branch .
+
+Para saltar entre ramas, se usa el comando git checkout
+
+­- Una vez realizado los cambios en la rama, estas deben fusionarse con git merge.
+
+El merge ocurre en la rama en la que se está posicionado. Por lo tanto, la rama a fusionar se transforma en la principal.
+
+Los merges también son commits.
+
+Los merges pueden generar conflictos, esto aborta la acción y pide que soluciones el problema manualmente, aceptando o rechazando los cambios que vienen.
+
+Repasa qué es un branch
+
+Sección Práctica
+</sub>
+
+
+```sh
+git checkout segunda #falta lo que cargamos en master
+
+git merge master #traemos los cambios desde la master y tenemos las dos ramas actualizadas
+```
+
+<sub>
+Ahora vamos a crear un conflicto para ver como salimos de el, vamos a cargar datos nuevos creando archivos html y css estando en la rama segunda, y también vamos a hacer lo mismo estando en la master y veremos como lo solucionamos.
+
+
+Abrimos el html y modificamos estando en la rama segunda
+
+
+Luego commiteamos en la rama segunda y pasamos a la rama master, guardar y commitear, hacer un merge estando en master: pongo en orden los comandos abajo.
+</sub>
+
+
+```sh
+ctrl + s #Guardamos los cambios en la rama segunda, ponemos cambios en css
+
+git commit -am "Modifique el css y el color del texto" es un ejemplo
+
+git checkout master #Modificamos el html, ponemos código y css ponemos texto blue
+
+ctrl + s #Guardamos los cambios
+
+git commit -am "Agregue suscripción, cambie el código y puse todo azul en css"
+
+git merge segunda #Hacemos un merge estando en master y veremos el conflicto
+```
+
+<sub>
+Para solucionar el conflicto podemos abrir el archivo con el editor de texto y modificar lo que nos este señalando y guardamos, esto en el css y en el html, lo podemos hacer desde VSC seleccionando: el cambio entrante.
+
+
+Debemos ahora commitear estos cambios, abajo pongo los comandos.
+</sub>
+
+
+```sh
+git status
+
+git commit -am "Solución de conflictos al mergear las ramas"
+
+git checkout segunda #Seguiremos con la versión anterior, porque el merge fue en master
+
+git merge master #Ahora pasamos los cambios a la rama segunda.
+```
+
+## CLASE 12 MIÉRCOLES 19 DE JUNIO DEL 2024 - Portafolio 6
+
+<sub>
+Cómo funcionan las llaves públicas y privadas parte 12
+
+Sección lectura
+
+Las llaves públicas y privadas, conocidas también como cifrado asimétrico de un solo camino, sirven para mandar mensajes privados entre varios nodos con la lógica de que firmas tu mensaje con una llave pública vinculada con una llave privada que puede leer el mensaje.
+
+Las llaves públicas y privadas nos ayudan a cifrar y descifrar nuestros archivos de forma que los podamos compartir sin correr el riesgo de que sean interceptados por personas con malas intenciones.
+
+Cómo funciona un mensaje cifrado con llaves públicas y privadas Ambas personas deben crear su llave pública y privada.
+
+Ambas personas pueden compartir su llave pública a las otras partes (recuerda que esta llave es pública, no hay problema si la “interceptan”).
+
+La persona que quiere compartir un mensaje puede usar la llave pública de la otra persona para cifrar los archivos y asegurarse que solo puedan ser descifrados con la llave privada de la persona con la que queremos compartir el mensaje.
+
+El mensaje está cifrado y puede ser enviado a la otra persona sin problemas en caso de que los archivos sean interceptados.
+
+La persona a la que enviamos el mensaje cifrado puede emplear su llave privada para descifrar el mensaje y ver los archivos.
+
+Nota: puedes compartir tu llave pública, pero nunca tu llave privada.</sub>

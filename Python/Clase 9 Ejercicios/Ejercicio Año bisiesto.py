@@ -13,7 +13,7 @@ while opcion == 1:
 
     else:
         print(f"El anio {anio} no es Bisiesto")
-
+ # ponerlo en operadores ternarios
     opcion = int(input("Para seguir adelante digite la opcion 1: "))
 
 print("Fin del programa")
