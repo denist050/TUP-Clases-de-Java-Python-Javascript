@@ -530,3 +530,4 @@ q #Para salir
 
 git checkout segunda #Volvemos a ver todos los cambios que hicimos de nuevo
 ```
+
