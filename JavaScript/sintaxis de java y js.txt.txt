@@ -35,4 +35,5 @@ Documentar
 
 operadores lógicos 
 and -> && doble aspersan
+or -> | |
 
