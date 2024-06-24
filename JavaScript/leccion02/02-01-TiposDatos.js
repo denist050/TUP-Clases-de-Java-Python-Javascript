@@ -66,3 +66,4 @@ console.log(typeof autos); //Preguntamos que tipo de dato es:
 var z = '';
 console.log(z);
 console.log(typeof z);
+
