@@ -31,4 +31,8 @@ Documentar
 \b = Retroceso 
 \f = Salto de pagina Operador de Aumento 
 ++ Operador de aumento
-{´´´´´´´´´´´´´´´´´ñ-- Operador de Decremento
+-- Operador de Decremento
+
+operadores lógicos 
+and -> && doble aspersan
+
