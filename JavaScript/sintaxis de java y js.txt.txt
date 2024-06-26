@@ -16,7 +16,7 @@ Operadores de Asignación
 
 Operadores de comparación
 ==
-===
+=== compara el valor y el tipo de dato
 
 Documentar
 // 
