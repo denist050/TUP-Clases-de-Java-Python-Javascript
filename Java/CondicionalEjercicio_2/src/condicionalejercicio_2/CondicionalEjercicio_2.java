@@ -22,13 +22,13 @@ public class CondicionalEjercicio_2 {
             estacion = "Verano";
             break;
         case 4: case 5: case 6:
-            estacion = "Verano";
+            estacion = "otoño";
             break;
         case 7: case 8: case 9:
-            estacion = "Verano";
+            estacion = "invierno";
             break;
         case 10: case 11: case 12:
-            estacion = "Verano";
+            estacion = "primavera";
             break;
     }   // Imprimimos la estación correspondiente al mes ingresado
             System.out.println("La estacion ingresada es: " + estacion);
