@@ -1,4 +1,4 @@
-"""
+
 miVariable = 3
 print(miVariable)
 miVariable = "hola a todos los alumnos de la tecnicatura"
@@ -147,7 +147,7 @@ print(resultado)
 # Operador menor o igual que
 resultado = d <= b
 print(resultado)
-"""
+
 # Operadores Logicos
 
 # Operador and
