@@ -1,4 +1,4 @@
-
+//10.6 Ejercicio: sistema de calificaciones con control switch
 package condicionalejercicio_3;
 
 import java.util.Scanner;
@@ -6,14 +6,17 @@ import java.util.Scanner;
 public class CondicionalEjercicio_3 {
 
     public static void main(String[] args) {
+        //Llamamos a la clase Scanner para ingresar los datos
         Scanner entrada = new Scanner(System.in);
+         // Solicitamos al usuario que digite una calificacion
         System.out.println("Digite una calificacion: ");
+       // Leemos la entrada del usuario y la convertimos a un número double
         double calificacion = Double.parseDouble(entrada.nextLine());
         var nota = "Ingrese una calificacion valida";
         
-        //convertimos el valor double a un entero
+        //convertimos el valor double a un entero para poder usarlo en sentencia switch
         int range = (int) calificacion;
-        
+        //segun la calificacion, imprimira la nota correspondiente
         switch(range){
             case 10:
             case 9:
@@ -37,7 +40,7 @@ public class CondicionalEjercicio_3 {
                 nota = "F";
                 break;
             
-        }
+        }   //se imprime la nota
             System.out.println("La calificacion del alumno es: " + nota);    
     }
     
