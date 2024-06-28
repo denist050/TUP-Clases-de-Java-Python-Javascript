@@ -19,6 +19,9 @@ while i <= 5:
 
     # se le suma 1 al iterador por cada ciclo recorrido
 
+
+
+
     i += 1
 # mostramos la suma de los salarios
 print(f"La suma de todos los salarios es: ${suma_salarios:.2f}")
